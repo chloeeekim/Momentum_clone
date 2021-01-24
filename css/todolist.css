@@ -30,7 +30,7 @@ label.toDoText {
 
 input.toDoCheckbox:checked + label.toDoText {
   text-decoration: line-through;
-  color: rgba(255, 255, 255, .8);
+  color: rgba(255, 255, 255, .5);
 }
 
 input.toDoCheckbox + label.toDoText:before {
@@ -52,6 +52,7 @@ input.toDoCheckbox:checked + label.toDoText:before {
   top: -5px;
   left: 15px;
   border-radius: 0;
+  border: 2px solid rgba(255, 255, 255, .5);
   border-top-color: transparent;
   border-left-color: transparent;
   transform: rotate(45deg);
