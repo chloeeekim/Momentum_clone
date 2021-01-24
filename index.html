@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+	<title>To Do List - Momentum Clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="js-clock"><h1></h1></div>
+    <div class="wrap">
+      <form class="js-askName inputForm">
+        <input id="name" type="text" class="inputField" required autocomplete="off"/>
+        <label for="name" class="inputLabel"><span>What is your name?</span></label>      
+      </form>
+      <h4 class="js-greetings"></h4>
+      <form class="js-toDoForm">
+        <form class="js-toDoInput inputForm">
+          <input id="todo" type="text" class="inputField" required autocomplete="off"/>
+          <label for="todo"><span>What are you going to do today?</span></label>
+        </form>
+        <ul class="js-toDoList">
+          <li id="1" class="toDo">
+            <input class="toDoCheckbox" type="checkbox"></input>
+            <span class="toDoText">test</span>
+            <button class="delToDoBtn">x</button>
+          </li>
+        </ul>
+      </form>
+    </div>
+    <span class="js-weather"></span>    
+    <script src="src/bg.js"></script>
+    <script src="src/clock.js"></script>    
+    <script src="src/todo.js"></script>
+    <script src="src/greeting.js"></script>
+    <script src="src/weather.js"></script>
+  </body>
+</html>
