@@ -19,32 +19,43 @@ li.toDo:not(:last-child) {
 }
 
 input.toDoCheckbox {
+  display: none;
+}
+
+label.toDoText {
+  padding-left: 65px;
   position: relative;
-  float: left;
-  margin-right: 10px;
-  margin-left: 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 5px;
-  outline: none;
-  background: transparent;
-  text-align: center;
   cursor: pointer;
+}
+
+input.toDoCheckbox:checked + label.toDoText {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, .8);
+}
+
+input.toDoCheckbox + label.toDoText:before {
+  content: '';
+  display: block;
+  width: 44px;
+  height: 44px;
+  border: 2px solid white;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  top: 5px;
   transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
 }
 
-input.toDoCheckbox:checked {
-  background-color: white;
-}
-
-input.toDoCheckbox + span.toDoText {
-  color: white;
-}
-
-input.toDoCheckbox:checked + span.toDoText {
-  text-decoration: line-through;
-  color: rgba(255, 255, 255, .8);
+input.toDoCheckbox:checked + label.toDoText:before {
+  width: 20px;
+  top: -5px;
+  left: 15px;
+  border-radius: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);  
 }
 
 .delToDoBtn {
@@ -55,6 +66,7 @@ input.toDoCheckbox:checked + span.toDoText {
   border-radius: 5px;
   width: 48px;
   height: 48px;
+  margin-top: 5px;
   visibility: hidden;
   opacity: 0;
   cursor: default;

@@ -37,7 +37,7 @@ function toggleChecked(event) {
 function paintToDo(toDo) {
   const li = document.createElement("li"),
    checkbox = document.createElement("input"),
-   span = document.createElement("span"),
+   label = document.createElement("label"),
    delBtn = document.createElement("button");
 
   li.className = "toDo";
@@ -46,16 +46,18 @@ function paintToDo(toDo) {
   checkbox.className = "toDoCheckbox";
   checkbox.type = "checkbox";
   checkbox.checked = toDo.done;
+  checkbox.id = `cb${toDo.id}`;
   checkbox.addEventListener("click", toggleChecked);
-  
-  span.className = "toDoText";
-  span.innerText = toDo.text;
+
+  label.className = "toDoText";
+  label.innerText = toDo.text;
+  label.htmlFor = `cb${toDo.id}`;
 
   delBtn.className = "delToDoBtn";
   delBtn.addEventListener("click", deleteToDo);
 
   li.appendChild(checkbox);
-  li.appendChild(span);
+  li.appendChild(label);
   li.appendChild(delBtn);
   toDoList.appendChild(li);
 }
