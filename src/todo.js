@@ -52,7 +52,6 @@ function paintToDo(toDo) {
   span.innerText = toDo.text;
 
   delBtn.className = "delToDoBtn";
-  delBtn.innerText = "X";
   delBtn.addEventListener("click", deleteToDo);
 
   li.appendChild(checkbox);

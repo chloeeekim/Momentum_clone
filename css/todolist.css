@@ -51,13 +51,14 @@ input.toDoCheckbox:checked + span.toDoText {
   float: right;
   color: white;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, .5);
+  border: 2px solid white;
   border-radius: 5px;
-  font-size: 48px;
-  padding: 0 15px;
+  width: 48px;
+  height: 48px;
   visibility: hidden;
   opacity: 0;
   cursor: default;
+  background: url( "../images/icon/bin.png" ) no-repeat;
   transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
 }
