@@ -26,6 +26,11 @@ label.toDoText {
   padding-left: 65px;
   position: relative;
   cursor: pointer;
+  display: inline-block;
+  width: 85%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 input.toDoCheckbox:checked + label.toDoText {
